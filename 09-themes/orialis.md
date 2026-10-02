@@ -22,5 +22,10 @@ theme.orialis.task
 
 ## 不应覆写
 
-不要因为 Orialis 是 Agent 产品就让所有内容玻璃化、让所有区域持续发光，或推翻 Core 的可读性、间距、状态和平台原生行为。
+不要因为 Orialis 是 Agent 产品就让所有区域持续发光，或推翻 Core 的可读性、间距、状态和平台原生行为。清透内容容器必须保持Calm与清晰地形，不增加逐行模糊或持续水波。
 
+## 当前实例化
+
+Flutter默认雕刻材质；桌面宿主可选择清透液态材质。命名色族mist/ocean/sage/amber/rose/lavender由同一主题机制派生。Orialis的优先级映射（rose重要且紧急、amber紧急、ocean重要、sage普通、mist未分类）属于Theme/领域规则，必须同时提供文字或图标。
+
+任务与日程数据、子项传播、排序保存、路由、账户和同步保留在宿主，不进入Lumina Core。

@@ -1,22 +1,19 @@
 # 06.5 — Feedback & Status
 
+反馈说明发生了什么、当前进度和可采取的动作。状态色只是辅助；搭配文字、形状、图标或语义值，不用整页染色代替具体说明。
+
 ## Tooltip
 
-轻量 Dense Glass + 简单文本即可，不需要复杂地形。
+Tooltip 为图标或不明显控件补充简短说明，不承载关键操作或唯一说明。Flutter `LuminaTooltip` 以 Lumina 玻璃绘制内容，并复用 SDK 的 hover/long-press 触发机制和语义 tooltip。触控端不能要求用户必须悬停才能理解控件；平台触发细节以 SDK 和平台层为准。
 
-## Toast
+## Toast / SnackBar
 
-短暂反馈可使用 Glass 或 Semi-glass，避免巨大 Card；信息应短、可读、有明确动作时再提供动作。
+用于短暂、非阻断的结果提示。消息简短，避免重要错误仅闪现后消失；有明确可逆动作时才提供操作。Flutter `showLuminaMessage` 显示 Lumina 消息 overlay，不要求宿主 `ScaffoldMessenger`。它继承触发上下文的主题/调色板并暴露 live-region 提示；消息文本和是否重试由调用方决定。
 
-## Progress
+## Progress 与 Loading
 
-Linear 使用 Recessed Track + Glass / Accent Progress；Circular 保持简洁几何，不让所有进度条持续闪烁。
+可确定进度时显示数值/比例；未知时使用 indeterminate 状态。避免无意义的持续闪烁，减少动态效果时仍提供“正在加载”语义。Flutter `LuminaLinearProgress(value: null)` 为不确定进度，确定值范围是 0 到 1，并提供加载语义和值百分比；减少动态效果时停止循环动画。进度控件不管理异步任务或完成状态。
 
-## Loading
+## Badge、Error、Success 与 Warning
 
-优先保持原布局，使用 Skeleton、Placeholder、Progressive Reveal 或极轻微 Material Activity，避免结构突然变化。
-
-## Error / Success / Warning
-
-颜色只作语义辅助，同时说明发生了什么、用户能做什么。不要让整个页面变红，也不要让 Success 只表现为一个绿色点。
-
+Badge 只标记简短数量或状态，不应遮挡其锚定控件。Flutter `LuminaBadge` 可有文字 label；纯装饰点不含文字语义。错误、成功、警告应说明结果及下一步；颜色与图形样式需兼顾高对比和色觉差异。

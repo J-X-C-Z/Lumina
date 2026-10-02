@@ -11,6 +11,8 @@ Solid Card       Rigid · Matte · Stable · Readable
 Flowing Glass   Fluid · Glossy · Responsive · Interactive
 ```
 
+Solid 的拓扑层级仍是内容结构的语义基础：Canvas、Solid、Raised、Recessed 各自表达稳定的承托、分组与层级。清透液态玻璃可以作为 Calm 内容结构中的容器或局部表面；它不取代 Solid 的内容职责，也不抹去底层拓扑关系。默认雕刻玻璃则保留细微纹理与蚀刻文字感。
+
 ## 视觉构成
 
 - 有厚度：通过 Edge、Micro Bevel、Surface Light、Ambient Occlusion 和 Layer Separation 表达。
@@ -19,7 +21,7 @@ Flowing Glass   Fluid · Glossy · Responsive · Interactive
 - 边缘明确但不锋利；可有约 1–3px 的视觉侧边厚度，但不做明显拟物挤出。
 - 微纹理可以存在，但只让纯色不那么数字化，不应明显看出 Noise。
 
-Light 中 Canvas 略深、Solid 略亮、Raised 再略亮；Dark 中 Canvas 最暗、Solid 稍亮、Raised 进一步提升。Solid Card 阴影比 Glass 更明确但仍柔和、低透明、不偏黑。
+Light 中 Canvas 略深、Solid 略亮、Raised 再略亮；Dark 中 Canvas 最暗、Solid 稍亮、Raised 进一步提升。Solid Card 阴影比 Glass 更明确但仍柔和、低透明、不偏黑。Lumina 的 Light 基础色为 Ink `#152232`、Paper `#E9EEF4`、Surface `#F2F5F8`、Accent `#3978D0`、Muted `#637183`、Danger `#AC4545`、Outline `#D8E0E5`；Dark 对应 Ink `#EEF3FA`、Paper `#101822`、Surface `#192431`、Accent `#8DBBFF`、Muted `#A3B3C5`、Danger `#FF8E91`、Outline `#344356`。命名 Palette tint 会参与派生 raised/recessed surface 与 accent，不应把这些基础值误读为每种 palette 的最终颜色。
 
 ## 内容与交互分工
 
@@ -35,4 +37,4 @@ Rigid Base → Liquid Interactive Layer
 
 ## 反模式
 
-所有内容都做玻璃、所有 Card 强阴影、用明显 3D 挤出制造厚度、写实陶瓷/塑料/金属纹理、Card inside Card inside Card、Solid Hover 变成液体。
+让所有内容持续流动或层层实时模糊、所有 Card 强阴影、用明显 3D 挤出制造厚度、写实陶瓷/塑料/金属纹理、Card inside Card inside Card、Solid Hover 变成液体。

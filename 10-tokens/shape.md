@@ -25,3 +25,4 @@ border.width.strong
 
 语义 Shape 可由项目 Theme 覆写，但内外嵌套应继续遵守同心关系。
 
+当前语义基线是 card24、control18、attachment14、capsule999。档位列表示可用尺度；组件采用已命名值及可测量的同心/肩部几何，见 [Shape](../02-foundations/shape.md)。

@@ -44,3 +44,19 @@ color.status.success / warning / error / info
 
 加入颜色前，确认它承担明确职责、没有与既有颜色重复、不用颜色无法更好表达、不会破坏焦点，并且在 Light / Dark 下都成立。
 
+## 当前数值基线
+
+共享 token 1.0.0 提供以下基色；具体 Raised、Recessed 和六套色族按主题派生。此表不是所有状态/背景的对比度认证。
+
+| 角色 | Light | Dark |
+| --- | --- | --- |
+| ink | #152232 | #EEF3FA |
+| paper / canvas | #E9EEF4 | #101822 |
+| surface | #F2F5F8 | #192431 |
+| accent | #3978D0 | #8DBBFF |
+| accentSoft | #DCE7F5 | #243D5D |
+| muted | #637183 | #A3B3C5 |
+| danger | #AC4545 | #FF8E91 |
+| outline | #D8E0E5 | #344356 |
+
+来源：[数值快照](../10-tokens/lumina.v1.json)。文字主体保持不透明；默认雕刻模式可叠加低对比细高光，清透模式移除蚀刻文字阴影。高对比场景优先可读文字与明确边界。

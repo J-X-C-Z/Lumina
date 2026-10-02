@@ -18,5 +18,5 @@ layout.gutter.sm / md / lg
 layout.sidebar.width / compact
 ```
 
-组件不得任意新建 18、21 等值；先检查 16 或 20 是否已经足够。
+组件优先复用命名值。当前 spacing 中 item14、tight6 是已命名光学校正，control18 属于圆角 token；不能只按是否为4的倍数判定合规。完整映射见 [当前数值映射](implementation-mapping.md)。
 

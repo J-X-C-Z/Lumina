@@ -9,6 +9,8 @@ Flowing Glass carries interaction.
 
 材质应让用户不用读说明，也能大致判断“这是内容，还是可以操作的东西”。
 
+Lumina 有两种玻璃绘制模式：默认雕刻玻璃（细微纹理、蚀刻文字感）和可选清透液态玻璃（无纹理、柔和漫射高光与阴影）。清透液态玻璃也可作为 Calm 内容结构的容器，但内容的层级仍由 Solid Topography（Canvas、Solid、Raised、Recessed）表达；选用清透外观不等于把内容结构改成交互层。材质选择与交互行为分别决定。
+
 ## 推荐组合
 
 | Pattern | 结构 | 适用 |
@@ -19,6 +21,7 @@ Flowing Glass carries interaction.
 | D | Solid + Raised Anchor | 标题、关键数字、结构锚点 |
 | E | Solid + Recessed Socket + Flowing Glass | 标准 Lumina Signature Pattern |
 | F | Solid Content + Floating Flowing Glass Toolbar | Desktop / Tablet 操作 |
+| G | Solid Topography + Clear Glass Container | Calm 内容分组；玻璃只提供容器外观，Solid 层级仍组织内容 |
 
 ## 面积控制
 
@@ -34,7 +37,7 @@ Special Effect     <5%
 
 ## 禁止组合
 
-限制 `Glass inside Glass inside Glass`，也避免 Glass Content Card + Glass Button + Glass Navigation + Glass Background 的全玻璃页面。连续嵌套会抹掉材质语义，并让透明、折射和文字可读性互相干扰。
+限制 `Glass inside Glass inside Glass`，也避免 Glass Content Card + Glass Button + Glass Navigation + Glass Background 的全玻璃页面。清透玻璃容器可用于内容结构，但应保留可辨认的 Solid Topography；连续嵌套会抹掉材质语义，并让透明、模糊和文字可读性互相干扰。真实折射不应作为 Flutter 当前实现的前提。
 
 ## 组合检查
 
@@ -43,4 +46,3 @@ Special Effect     <5%
 3. 是否能用 Spacing、Typography 或 Scored 完成分组？
 4. 是否共享同一个光源和几何关系？
 5. 是否有 Reduce Transparency、性能和可读性降级？
-

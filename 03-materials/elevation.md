@@ -34,3 +34,4 @@ L0  Canvas
 
 > **Depth should explain relationships, not decorate surfaces.**
 
+清透模式可以改变 L1–L3 的外观，不改变其内容职责。层级数字是设计关系，不是固定 z-index、像素厚度或每层独立实时滤镜；按平台实现和遮挡关系确定绘制。

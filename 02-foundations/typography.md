@@ -44,3 +44,18 @@ font.mono     代码与技术数据
 
 不强制所有平台使用同一字体文件；保持排版性格一致比字体名称完全相同更重要。支持 Dynamic Type、系统字体缩放和中文 fallback。
 
+## Flutter 当前映射
+
+| 角色 | 默认逻辑字号 | 行高 | 字重 |
+| --- | ---: | ---: | --- |
+| bodySmall | 13 | 1.5 | Regular |
+| bodyMedium | 15 | 1.5 | Regular |
+| bodyLarge | 17 | 1.5 | Regular |
+| cardTitle / titleSmall | 18 | 1.3 | 600 |
+| titleMedium | 20 | 1.3 | 600 |
+| recessedTitle | 16 | 1.35 | 500 |
+| titleLarge | 24 | 1.25 | 600 |
+| headlineSmall / Medium / Large | 28 / 36 / 40 | 1.25 | 600 |
+| labelSmall / Medium / Large | 13 / 14 / 15 | 继承相应正文 | 500 |
+
+这是 Flutter 当前样式映射，通用角色建议仍用于尚未映射的场景。`fontScale` 与系统文字缩放共同生效；禁止通过全局固定尺寸或强制 textScaler=1 隐藏溢出。标题肩部按实际首行高度定位，不能按卡片宽度比例猜测。示例中文字体只用于展示，不是 Core 字体资产。

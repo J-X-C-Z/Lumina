@@ -1,34 +1,21 @@
 # 06.1 — Buttons
 
-## Button
+按钮表达可执行操作。用层级、文案和状态区分操作优先级；材质不得削弱文字、图标、焦点或禁用状态的辨识度。
 
-### Primary
+## Primary、Secondary 与 Destructive
 
-优先使用 Flowing Glass，用于页面主要操作；材质强度不应盖过按钮文字和页面内容。
+- **Primary**：每个局部操作区突出最重要的提交或继续操作。Lumina Flutter 的 `LuminaButton`、`LuminaMaterialButton` 提供 filled、tonal、elevated、outlined、text 等外观；外观不改变调用方提供的回调语义。
+- **Secondary**：用于次要操作。若邻近控件已有强烈玻璃效果，改用稳定、低对比的实色层级。
+- **Destructive**：使用明确动词和危险语义色；需要确认时由调用方提供确认流程。不能仅凭红色表达危险，也不在组件内推断业务后果。
 
-### Secondary
+## Icon Button 与 FAB
 
-根据上下文使用 Subtle Glass 或 Solid Control。若页面已有多个玻璃控件，优先用 Solid 降低竞争。
+图标按钮应有可理解的语义标签；只有图形本身清晰且上下文充分时才省略可见标签。图形大小与命中区分开处理，触控端优先满足至少 48 logical pixels；更小的视觉图标仍须有足够大的交互区域。悬停和键盘焦点不可只靠颜色表示。
 
-### Destructive
+FAB 用于页面级高优先级动作；Extended FAB 仅在标签能帮助识别动作时使用。避免同屏多个同级 FAB。Flutter 目录对应 `LuminaFloatingActionButton`，提供图标或 `label` 形式。
 
-保留材质体系，通过 Error Tint + Clear Label 表达危险，不把按钮做成廉价红色大块。
+## 状态与反馈
 
-## Icon Button
+对适用的平台提供 Default、Hovered、Pressed、Focused、Disabled 状态。Loading 只在异步动作明确需要时展示，并避免重复提交；组件不推断请求成功或失败。按压反馈短促、局部，玻璃形变不能遮挡标签；减少动态效果时保留静态按压/焦点提示。
 
-可用 Circle 或 Rounded Square。Circle 适合独立快捷操作、浮动控件和简洁 Toolbar；Rounded Square 适合 Dense Toolbar、并列功能和 Desktop Tool。若位于 Solid Card，优先作为 Flowing Glass Control。
-
-## 间距与命中区
-
-```text
-Small   Horizontal 12 / Vertical 6–8
-Medium  Horizontal 16 / Vertical 10
-Large   Horizontal 20–24 / Vertical 12–14
-```
-
-Icon + Text 默认间距 8。视觉图形与 Hit Area 分开，Mobile 至少约 44–48，Watch 尽可能更大。
-
-## 反馈
-
-Solid Button 使用轻微压入和阻尼；Glass Button 使用局部 Compression、Ripple、Refraction 和恢复。不要对所有按钮使用长时间 Expressive Motion。
-
+Material 外观由 Lumina 绘制不代表所有平台命中区或设备行为已验收；目标平台的触控、键盘和辅助技术行为须单独核对。

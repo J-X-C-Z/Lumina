@@ -13,7 +13,7 @@ radius.md = 12    radius.lg = 16  radius.xl = 20
 radius.2xl = 24   radius.3xl = 28 radius.full = Full
 ```
 
-语义映射基线：`shape.control → md`、`shape.card → lg`、`shape.container → xl`、`shape.floating → xl/2xl`、`shape.overlay → 2xl`。
+当前共享材质基线：`radius.control=18`、`radius.card=24`、`radius.attachment=14`、`radius.capsule=999`。这些数值由 token 1.0.0 定义；Primitive 档位用于其他规模和布局，不覆盖现有语义值。
 
 ## 形状关系
 
@@ -26,14 +26,10 @@ radius.2xl = 24   radius.3xl = 28 radius.full = Full
 ## 默认形状配方
 
 ```text
-Small Control      8
-Input              12
-Button             12
-Card               16
-Large Card         20
-Panel              20
-Floating Surface   20–24
-Dialog             24
+Generic Control    18
+Content Card       24
+Attachment         14
+Capsule Control    Full（语义值999，由实际尺寸形成胶囊）
 Chip / Filter      Full
 Icon Action        Circle
 Avatar             Circle
@@ -41,5 +37,5 @@ Avatar             Circle
 
 Shape 还包括 `border.none / hairline / standard / strong`。优先顺序是 `Spacing → Surface Difference → Subtle Border → Strong Border`；Strong Border 留给 Focus、Selection、特殊状态和无障碍。
 
-避免所有组件统一超大圆角、所有按钮 Capsule、Card 套 Card、随机出现 13/17/22/27 等值、粗边框制造“高级感”，或为了统一而无视平台原生控件。
+避免所有组件统一超大圆角、忽视角色强制所有控件使用同一种 Shape、重复套卡片、使用没有命名用途的随机尺寸、粗边框制造“高级感”，或为了统一而无视平台原生控件。
 

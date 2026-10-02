@@ -33,3 +33,4 @@ color.status.info
 
 Primitive 色板按 Theme 提供，如 `neutral.* / blue.* / green.*`；组件不直接绑定 `buttonBlue` 或 `cardGray`。
 
+当前八个 Light/Dark 基色见 [JSON 快照](lumina.v1.json) 与 [颜色表](../02-foundations/color.md)。Success/Warning 等是语义要求；当前 JSON 未提供完整的四态状态色组，不能把缺失字段当作运行时 API。

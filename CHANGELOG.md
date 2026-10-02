@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.2 — Current Flutter implementation baseline · 2026-10-02
+
+- 按当前控件修订雕刻/清透液态材质、Calm内容容器与地形关系。
+- 校正颜色、control18/card24、命名间距、48交互目标和140/180/220/420ms时间。
+- 映射固定28类Flutter目录，补充焦点、禁用/选中语义、日期/时间及弹层继承。
+- 明确真实Gaussian sigma、仅chrome/选择井启用背景模糊，以及SDK行为与Lumina绘制的边界。
+- 新增token1.0.0数值快照、运行时映射、源码指纹及实际控件截图。
+- 将实时折射/水痕等探索与平台增强从Flutter已实现能力中分开，保留真机、人工屏幕阅读器与性能验收边界。
+
+
 ## v0.1 — Initial nested specification
 
 - 品牌名称统一为 **Lumina · 光构**。

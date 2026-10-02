@@ -15,3 +15,4 @@ Solid carries content.
 Flowing Glass carries interaction.
 ```
 
+两种当前外观：[默认雕刻 / 可选清透液态](flowing-glass.md)。清透模式允许 Calm 内容容器，仍按内容/交互角色和地形组织层级。材质模式、性能模式与无障碍降级分别决定。

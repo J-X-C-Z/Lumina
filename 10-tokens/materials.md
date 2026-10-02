@@ -42,3 +42,6 @@ glass.etched-ink
 
 这些 Token 表达角色与强度，不预设所有平台必须使用同一实现；Web、Mobile、Desktop 和 Watch 可以按性能与系统能力降级。
 
+## 实现映射限制
+
+雕刻/清透是外观模式，与性能模式独立。JSON glass.blur=12、highPerformanceBlur=6 不是 Flutter 实际 sigma：当前 Flutter Gaussian 档位为0/3.5/5.5/9/14；Web 使用 CSS 映射。`glass.trace/refraction/ripple` 等语义名是设计能力架构，不代表 Flutter 已实现真实折射或水波。完整策略见 [Flowing Glass](../03-materials/flowing-glass.md) 和 [Flutter](../08-platforms/flutter.md)。

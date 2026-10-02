@@ -5,7 +5,7 @@
 
 ## 基础规则
 
-采用 `4pt Grid`：`4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 64 / 80 / 96`。
+一般布局采用 `4pt Grid`，组件可使用有名称、有用途的光学校正值（当前 item14、tight6），不得将网格解释成所有尺寸必须为4的倍数：`4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 64 / 80 / 96`。
 
 ```text
 space.0 = 0    space.1 = 4    space.2 = 8    space.3 = 12
@@ -27,7 +27,7 @@ space.24 = 96
 | Card Padding | 16–24；紧凑 12–16；大型 24–32 |
 | Icon + Text | 8；紧凑 6；大型 10–12 |
 | Content Group Gap | 16 |
-| Section Gap | 32；大型 48 |
+| Section Gap | 当前控件默认24；大型内容分区32–48 |
 | Reading Width | 600–760px |
 | Sidebar | 220–280；Compact 64–88 |
 
@@ -45,3 +45,8 @@ Breakpoint 基线：`Compact <600 / Medium 600–1024 / Expanded 1024–1440 / L
 
 默认 `Comfortable`；高信息密度工具可使用 `Compact`。Compact 主要减少 Padding、Gap、Row Height，而不是把所有字号整体缩小。
 
+## 当前控件数值
+
+共享 spacing：page20、pageTop12、section24、item14、compact8、tight6、emptyState24、controlGap8。页面布局建议不覆盖这些明确的组件默认值；桌面多栏、阅读宽度和密度由宿主按内容决定。
+
+minimumControl48 是交互目标基线；topBarContent56 是完整顶栏内容高度 token；紧凑顶栏可采用最少48内容高度加上下各4 padding。图标17/24、视觉圆形或镜片大小不等于命中区。

@@ -1,61 +1,32 @@
-# Lumina · 光构 Design System v0.1
+# Lumina · 光构 Design System v0.2
 
-**Lumina（光构）**是这套个人设计语言的新品牌名称。
+**稳定的信息，流动的交互。** Lumina 用清晰的层级、安静的内容表面和可响应的玻璃控件组织界面。
 
-个人设计系统的第一版可执行基线：让复杂的东西显得清晰，让数字界面拥有自然的秩序与质感。
+v0.2 根据 2026-10-02 的 Flutter 控件实现修订。保留五个设计关键词与 Solid Topography，补齐清透液态材质、固定 28 类控件、状态、键盘、降级策略及可追溯的数值基线。设计规范 v0.2、Flutter 包 0.1.0 和共享 token 1.0.0 是不同版本。
 
-> **Stable Information · Fluid Interaction**  
-> 稳定的信息，流动的交互。
+## 阅读入口
 
-## 如何阅读
-
-这是一套嵌套式规范。先读上层原则，再按需要进入下层文件：
-
-```text
-01 Philosophy
-    ↓ 为什么这样设计
-02 Foundations
-    ↓ 颜色、排版、空间、形状
-03 Materials
-    ↓ Solid 与 Flowing Glass 如何形成空间
-04–05 Motion / Iconography
-    ↓ 材质如何动、符号如何表达
-06 Components
-    ↓ 可复用的交互部件
-07 Patterns
-    ↓ 完整页面如何组织
-08 Platforms
-    ↓ 同一种语言如何适配不同设备
-09 Themes
-    ↓ 项目品牌如何继承与覆写
-10 Tokens
-    ↓ 将规范落到设计与代码
-```
-
-## 目录
-
-- [01 — Design Philosophy](01-philosophy/design-philosophy.md)
-- [02 — Foundations](02-foundations/README.md)：[Color](02-foundations/color.md) · [Typography](02-foundations/typography.md) · [Spacing & Layout](02-foundations/spacing-layout.md) · [Shape](02-foundations/shape.md)
-- [03 — Materials](03-materials/README.md)：[Flowing Glass](03-materials/flowing-glass.md) · [Solid](03-materials/solid.md) · [Surface Deformation](03-materials/surface-deformation.md) · [Elevation](03-materials/elevation.md) · [Composition](03-materials/material-composition.md)
-- [04 — Motion](04-motion/motion-system.md)
-- [05 — Iconography](05-iconography/iconography.md)
-- [06 — Components](06-components/README.md)
-- [07 — Patterns](07-patterns/README.md)
-- [08 — Platforms](08-platforms/README.md)
-- [09 — Themes](09-themes/README.md)
-- [10 — Tokens](10-tokens/README.md)
-- [CHANGELOG](CHANGELOG.md) · [STATUS](STATUS.md)
-
-## v0.1 的状态边界
-
-相对稳定的核心是：五个设计关键词、Solid × Flowing Glass 的材质分工、Solid Topography，以及“材质服务于信息和交互”的总体语言。
-
-02–05 的颜色、字体、间距、形状、动效参数和组件尺寸，是参考成熟设计体系后整理出的可用基线；它们会在 Orialis 和其他真实项目中继续修订，不需要现在一次性锁死。
+| 层 | 文档 | 解决的问题 |
+| --- | --- | --- |
+| 原则 | [01 Philosophy](01-philosophy/design-philosophy.md) | 为什么这样设计 |
+| 基础 | [02 Foundations](02-foundations/README.md) | 颜色、排版、空间和形状 |
+| 材质 | [03 Materials](03-materials/README.md) | 雕刻与清透模式、空间与成本 |
+| 动效 | [04 Motion](04-motion/motion-system.md) | 连续反馈、可打断与减少动态效果 |
+| 图标 | [05 Iconography](05-iconography/iconography.md) | 符号语义 |
+| 组件 | [06 Components](06-components/README.md) · [Flutter 28 类映射](06-components/flutter-catalog.md) | 外观、状态和行为 |
+| 页面 | [07 Patterns](07-patterns/README.md) | 内容组织 |
+| 平台 | [08 Platforms](08-platforms/README.md) · [Flutter 实现与验收](08-platforms/flutter.md) | 共享语言与平台差异 |
+| 主题 | [09 Themes](09-themes/README.md) | Core 与项目主题 |
+| 数值 | [10 Tokens](10-tokens/README.md) · [机器可读快照](10-tokens/lumina.v1.json) | 当前基线和映射 |
 
 ## 使用规则
 
-1. 优先复用现有语义 Token，再新增值。
-2. 先判断这是 Lumina Core 规则还是项目 Theme 规则。
-3. Solid 默认承载内容，Flowing Glass 默认承载交互。
-4. 用空间、排版和材质建立层级，最后才使用装饰。
-5. 所有材质和动效都必须有可读性、性能和无障碍降级方案。
+内容保持 Calm，交互提供明确状态；两者都以可读性为前提。默认雕刻材质保留哑光承托与微地形；清透模式使用无颗粒表面、薄边缘和柔和阴影。清透内容容器仍保持稳定层级，不持续流动。
+
+优先使用现有语义 token。状态不能只靠颜色；焦点必须可见；减少动态效果、降低透明度与高对比度必须保留操作能力。平台共用数值与语义，不承诺同一绘制器、相同模糊参数或全部行为已经验收。
+
+## 状态与来源
+
+[STATUS](STATUS.md) 记录已实现、已检查和待验收的边界；[CHANGELOG](CHANGELOG.md) 记录修订原因；[实现基线](08-platforms/implementation-baseline.json) 保存源文件指纹与检查记录。
+
+本仓库发布设计规范和数值快照。Flutter/Web 实现在 Orialis 的 `packages/lumina_ui` / `packages/lumina_web`；本次规范推送不发布这些未提交源码。旧 `Lumina-Design-System-v0.1.zip` 为历史归档，当前可下载 [Lumina-Design-System-v0.2.zip](https://github.com/J-X-C-Z/Lumina/raw/refs/heads/main/Lumina-Design-System-v0.2.zip)。
