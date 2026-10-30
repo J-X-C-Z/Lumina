@@ -56,11 +56,15 @@ Impact → Compression → Circular Wave → Refraction Change → Damping → R
 
 ```text
 Normal          裁剪后的 Gaussian BackdropFilter；sigma 5.5（BlurM）；宿主显式关闭高性能模式时使用
-High-performance sigma 3.5（BlurS）；减少阴影成本并停用移动放大镜层
+High-performance 按组件选择静态磨砂/缓存阴影；显式 backdrop 选择井可使用 BlurS 3.5
 Reduced motion  不改变模糊预算；停用位置运动/放大镜等动态效果
 Reduced transparency / High contrast  不透明材质，不应用 backdrop blur
 ```
 
-Flutter 使用 `ImageFilter` Gaussian sigma：BlurXS 0、BlurS 3.5、BlurM 5.5、BlurL 9、BlurXL 14。常规模式玻璃导航使用BlurM，默认开启的高性能模式使用BlurS；帧预算自适应在连续慢帧后降低模糊、稳定后恢复，并保留 BlurS 下限。该实现没有自定义降采样或 Dual Kawase 后端。实时指针轨迹、水波和真实折射仍是设计探索或平台专属实现，不属于 Flutter 已实现能力。
+Flutter 使用 `ImageFilter` Gaussian sigma：BlurXS 0、BlurS 3.5、BlurM 5.5、BlurL 9、BlurXL 14。常规模式显式 backdrop 的 chrome 通常使用 BlurM；高性能的 `LuminaSurface` 不采样 backdrop，选择井显式启用 backdrop 时可使用 BlurS；帧预算自适应在连续慢帧后降低模糊、稳定后恢复，并保留 BlurS 下限。该实现没有自定义降采样或 Dual Kawase 后端。实时指针轨迹、水波和真实折射仍是设计探索或平台专属实现，不属于 Flutter 已实现能力。
 
 Reduce Motion 遵循系统禁用动画设置，也支持 `motionScale=0`；它关闭位置运动与放大镜等动态效果，不改变控件语义。Reduce Transparency 或 High Contrast 使用不透明表面并关闭 backdrop blur。无论降级与否，交互语义和文字可读性不能消失。
+
+## 当前实现的分支边界
+
+`LuminaSurface` 的背景采样默认关闭，仅非高性能、非不透明且显式 `backdrop` 的 glass 表面启用。`LuminaSlidingSelection` 的选择井另有策略，不能由前者推断其所有滤镜均关闭。轻拟态夹层井是自身静态图像滤镜/预绘缓存，不是背景采样。放大镜受材质、CardScope 与减少动态效果分支控制，不能仅由高性能开关推断。详见[轻拟态材质](neumorphic-glass.md)。

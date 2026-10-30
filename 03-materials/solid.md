@@ -38,3 +38,7 @@ Rigid Base → Liquid Interactive Layer
 ## 反模式
 
 让所有内容持续流动或层层实时模糊、所有 Card 强阴影、用明显 3D 挤出制造厚度、写实陶瓷/塑料/金属纹理、Card inside Card inside Card、Solid Hover 变成液体。
+
+## 轻拟态分支
+
+启用 `neumorphic` 时，凸起与凹陷可与底材同色，依靠统一光向的阴影和边缘建立克制深度。不能继续套用上文雕刻模式“每层更亮”的配色假设。具体开关、夹层及缓存见[轻拟态材质](neumorphic-glass.md)。

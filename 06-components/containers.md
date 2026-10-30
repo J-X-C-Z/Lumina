@@ -25,3 +25,9 @@ Flutter `showLuminaDatePicker` 将 `initialDate`、`firstDate`、`lastDate` 归�
 ## 分隔线
 
 分隔线用于说明分组或层级，不宜将每个列表行都框成独立卡片。Flutter 提供 `LuminaDivider` 与 `LuminaEngravedDivider`；凹刻效果必须保持足够的边界辨识度。
+
+## 当前承托与收合
+
+旧雕刻分支的凹面缺少 card host 时由共享表面补承托；轻拟态允许直接在同材质底板挖槽。完成闭合沿顶部开口，内容、边缘与布局高度一致收合，不再加一层移动矩形硬裁剪或横向遮挡条。保存先于视觉完成；失败保留条目。
+
+Dialog、日期/时间选择器、Sheet 和 popup menu 容器使用不透明凸起卡；Sheet 内部 `LuminaCardScope` 同时约束行、按钮和选择控件，继承主题仍保留焦点与语义。

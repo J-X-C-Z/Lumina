@@ -1,86 +1,63 @@
 {
-  "revision_date": "2026-10-02",
-  "design_spec_version": "0.2",
-  "flutter_package_version": "0.1.0",
+  "revision_date": "2026-10-31",
+  "design_spec_version": "0.3",
+  "flutter_package_version": "1.0.0",
   "token_version": "1.0.0",
   "source": {
     "repository": "https://github.com/J-X-C-Z/Orialis",
-    "base_commit": "7a60322",
-    "state": "local uncommitted implementation; source is not published by this specification push",
-    "sdk": "Flutter 3.47.4 / Dart 3.13.3"
+    "base_commit": "e4eb6b7db1cb8551276c44b75987ad207be1e597",
+    "state": "Current local working tree includes uncommitted implementation; this specification update does not publish those source changes.",
+    "sdk": "Flutter >=3.47.0 / Dart >=3.13.0 per current package constraints; no SDK rerun in this documentation task."
   },
-  "checks": [
+  "verification_scope": "Existing logs/reports read and hashed in this task; no Flutter rerun or device test performed by this documentation update.",
+  "files_sha256": {
+    "packages/lumina_ui/pubspec.yaml": "cb2a47ae886064cd08e154b41106815bdf4c2a0f51b4294bec491d0048870e2a",
+    "packages/lumina_tokens/lumina.v1.json": "8d255b118f8ee9faca8ba2548b3377791ca138eb8647678539fe5c756fc980cb",
+    "packages/lumina_ui/lib/src/app_theme.dart": "d56458816f3dcc06883ad3c50e7a330b7cb5e2913d6e0ce7c34003d83aa06e20",
+    "packages/lumina_ui/lib/src/design_components.dart": "7a835acb996e703b294049456ee8476e8743f65a766fdf9010808158fe4778ec",
+    "packages/lumina_ui/lib/src/lumina_material.dart": "00db377546d9530567a06733bbd08633ea3dc99ba8d8b0208a231c255639e6ce",
+    "packages/lumina_ui/lib/src/lumina_glass_sandwich.dart": "11fa1708a72c3b779808042ca5071c111f149d7718bfe4f9a84d930c541c5dd9",
+    "packages/lumina_ui/lib/src/lumina_inputs.dart": "2119bc6b914cfd1111cc4cf0b2a98a087aa94b0c4fe22e162fd9ace6742418b3",
+    "packages/lumina_ui/lib/src/lumina_catalog_selection.dart": "021b548f87b4c97e926c7a9e3f3b6b58b1f9435fd262aeadc6c80f23de5bb052",
+    "packages/lumina_ui/lib/src/lumina_motion.dart": "d28dd8a1d1e5c52498a6c3b38936383ace59a7c79ee9187a9a2f05f4210b37ba",
+    "packages/lumina_ui/lib/src/lumina_completion.dart": "c5cc084d5d978187fe975150b82d08813652f8a84ce59211a0c1ccf5f4e2c962",
+    "packages/lumina_ui/lib/src/lumina_blur.dart": "2fed1620546ac9d5745abafb475d6ec12b98afa95894855e6f436e405485c5c5",
+    "packages/lumina_ui/test/lumina_press_continuity_test.dart": "149dd07837c416e8a48726f6fe485ee45e3846ae407cfdf2146f20560b204c2e",
+    "packages/lumina_ui/test/lumina_selection_continuity_test.dart": "0463442579142eff47c7fe323b272d919c7621094fc11dbd3ca3dfd1e5c7c119",
+    "docs/implementation/mobile-motion-20261031.md": "e97b73c00060f120e9f32a4e7e5747b84745fd543a48ef0fa72908af67f35f25",
+    "docs/implementation/navigation-haptics-20261030.md": "aca241b5288038ab114951aa6388e8b9500c5cb0b3c97563e2d706359248d503"
+  },
+  "evidence": [
     {
-      "log": "lumina-final-tests.log",
-      "passed": 106,
-      "log_sha256": "d780be45233288a71e20fce337217955e46c5651ce57f1df1b2172d3f5867027"
+      "source": "Orialis local deliveries/continuous-motion-20261031/package-tests.log",
+      "sha256": "566a25be5be9f0e8d14aabd5474c45c6c257b0a2a8e1c9316ddcc97326c8d5b8",
+      "claim": "Existing complete component regression log: 215 tests passed"
     },
     {
-      "log": "lumina-example-tests.log",
-      "passed": 4,
-      "log_sha256": "0184ef2d6fa0a68a33416707d596abe0c3d4f9431268d9b26184571415d9f449"
+      "source": "Orialis local deliveries/continuous-motion-20261031/package-analyze.log",
+      "sha256": "7ec1acabf1f333c2363c8fbbdf320076a50cb8fee9e3a19d42eaba644883c3e1",
+      "claim": "Existing targeted package analysis: No issues found"
     },
     {
-      "log": "lumina-mobile-tests.log",
-      "passed": 23,
-      "log_sha256": "117cf1f4e0ae76907a57c249230c511b60462681a8178e7ae83b73215d2caceb"
+      "source": "Orialis local deliveries/continuous-motion-20261031/mobile-analyze.log",
+      "sha256": "e979dd55841593f1aa1af426a5ec6b72f8e26669bf4e42e32c97eab28d4edbb9",
+      "claim": "Existing targeted mobile analysis: No issues found"
     },
     {
-      "check": "Flutter library and example static analysis",
-      "result": "no issues"
+      "source": "Orialis local deliveries/continuous-motion-20261031/REPORT.md",
+      "sha256": "f5ff30ac09f04d987105cb149074bbd6b1f0d2c6f7162af25221c9992458bff2",
+      "claim": "Existing source-level continuity report; no device acceptance for latest motion"
     },
     {
-      "check": "example web release build",
-      "result": "passed"
-    },
-    {
-      "check": "browser visual observation",
-      "result": "light sculpted English and dark clear-glass Chinese observed"
+      "source": "Orialis local deliveries/mobile-combined-20261030/REPORT.md",
+      "sha256": "95bf3f8b273f13b2efd40ce7abe0e3d475bba8e55601a0829c7d0643628e56a6",
+      "claim": "Existing HyperOS navigation selection haptic and deduplication acceptance report"
     }
   ],
-  "files_sha256": {
-    "packages/lumina_tokens/generate_flutter.py": "15e8375a1a8a08467ee053b9a8175afaab2c1cac7765e021a0350abdb472339c",
-    "packages/lumina_tokens/lumina.v1.json": "8d255b118f8ee9faca8ba2548b3377791ca138eb8647678539fe5c756fc980cb",
-    "packages/lumina_ui/example/lib/catalog_showcase.dart": "f66d712eef03479d8f9c4181da9ce86e2330139faa1e322280b89d37fd8fba2a",
-    "packages/lumina_ui/example/lib/main.dart": "047f2fc0e05f9e272a4b577a94f8b28fceef39e14ee6690ef7c36691354ed28c",
-    "packages/lumina_ui/example/test/catalog_showcase_test.dart": "adae7915df3c94fa6cb9f54f115b3649100c78c991f38a79d71011aac9fb79dd",
-    "packages/lumina_ui/example/test/widget_test.dart": "c4481b94650eb882cf7e81689a9531f8a81b523565c1471a402ff241bd431267",
-    "packages/lumina_ui/lib/lumina_ui.dart": "6322053cb8a9f8c40f5027cb99d39dd5949a31d031779c01456f45e35369b78d",
-    "packages/lumina_ui/lib/src/app_theme.dart": "b2f9d4578668c2787a9559e5c550d3dc2bada364652c27584d316ba7992bae2f",
-    "packages/lumina_ui/lib/src/design_components.dart": "6f7bddd9fca1e644351276d7197bd18ca1fb39dcff540a17024129ea220cd95b",
-    "packages/lumina_ui/lib/src/design_tokens.dart": "fae3607de5693bffe115b53f6ac8ebef92a1cf316f5419cd606fe3c642b69f8f",
-    "packages/lumina_ui/lib/src/lumina_blur.dart": "e383070125d28d45feb3524e6ef5bdf94f4419c7b560b072b5e0387b1a2efa16",
-    "packages/lumina_ui/lib/src/lumina_calendar.dart": "d0a06c1f3000b1af675ea9e871ec89293f575e0ddb8890cf8721f1471d39c47f",
-    "packages/lumina_ui/lib/src/lumina_catalog.dart": "0e39fff26f3d07f0288acecb9ef233b5030f64c5be0d95f185e5d08d633ede85",
-    "packages/lumina_ui/lib/src/lumina_catalog_feedback.dart": "924db5bb6e567675d2468e07bdf88569225f3a0fcaadfcf538ff1b9ff580495c",
-    "packages/lumina_ui/lib/src/lumina_catalog_navigation.dart": "399baec67ba9f04760d920b719ed544dd04c71e48af65bcfedbe50f47b08aa88",
-    "packages/lumina_ui/lib/src/lumina_catalog_selection.dart": "8bdb48e2fbe555a37f5e253a154c6349548500e89eac835b115f5191dc676852",
-    "packages/lumina_ui/lib/src/lumina_completion.dart": "04e45ad2e0ad68ff91610b6d5dc73b8975059940628f68170d971d5f366bd136",
-    "packages/lumina_ui/lib/src/lumina_icons.dart": "0a8eee821177cb83e017144078036cb15e9310dd6453f7abef3e55b36b802375",
-    "packages/lumina_ui/lib/src/lumina_inputs.dart": "4c3224d35179ed8b2193376e2c27831a8355681e1498d3476b350a38d24974d9",
-    "packages/lumina_ui/lib/src/lumina_keyboard.dart": "da4c5f4f5658354d5cbd81a98b60ee5ca9a29b25a1edfd1fe71934847e05b899",
-    "packages/lumina_ui/lib/src/lumina_localizations.dart": "e848ca563f4789e76ad59aa767b2e6b04d114e14cbfc98280b40a7c9b13f4ae0",
-    "packages/lumina_ui/lib/src/lumina_material.dart": "12449fcd966b5c8e2cdad2ad22385cfb3db8d7c8ee8b0690d8b72f9fede8ef6f",
-    "packages/lumina_ui/lib/src/lumina_motion.dart": "7e099ff2387a35d804ed1e73359051f1b36b50c1be04fb10d5a83f26fcfdc189",
-    "packages/lumina_ui/lib/src/lumina_overlays.dart": "7be4ffc1d370f99c9954907c7e32e18024ba04997f5157e66ffff8dded040298",
-    "packages/lumina_ui/lib/src/lumina_patterns.dart": "6b54169bf8c751727f2c7ba4c4ca3375caa5c9efa66b81d7d43162d32c576cd1",
-    "packages/lumina_ui/lib/src/lumina_reorder.dart": "1ff4f5b4a04cbbfbfa4a9fc73fa723091b9395fc410ab6bbe7c83c703c46b59c",
-    "packages/lumina_ui/lib/src/lumina_selection.dart": "e4d78399217a327f4cadfffc44b979b548c960ad3932f2ce565d5d164adfb615",
-    "packages/lumina_ui/lib/src/lumina_services.dart": "daf984496091f4b9ecf31e260a02decccb1fe586702b3e5f40b2c8c20df899f3",
-    "packages/lumina_ui/lib/src/lumina_tokens_generated.dart": "169a5efd300cc6a7d368da1785f3a70fd58b9c799acd84aa84ca7159241809b5",
-    "packages/lumina_ui/test/liquid_glass_test.dart": "ef4e498941f287341bd43070a725a92ddefdcc1390a69c39739bb4ff5f763b67",
-    "packages/lumina_ui/test/lumina_blur_test.dart": "8c12811eb0afc5645e3b153dde60467f249fffd4ea67ae17d9c0506b42b8eefb",
-    "packages/lumina_ui/test/lumina_calendar_test.dart": "4bebce48636b179a1562b2f4f1884230b2a1d904e9a57d3defe766d9cca7c34c",
-    "packages/lumina_ui/test/lumina_catalog_feedback_test.dart": "e68e9f0f78fec1f09d9aafef652f784460b68b9ad5c8236653e0abab5d2d0520",
-    "packages/lumina_ui/test/lumina_catalog_navigation_test.dart": "615dc60448b943414d398a1d8ea03b0b6af9e4b299dfbdd8d490f989260779d0",
-    "packages/lumina_ui/test/lumina_catalog_selection_test.dart": "b03b76e24158daee0d46538b0ddebbd7648667284a1fb372e3ab02bf8d9e67ce",
-    "packages/lumina_ui/test/lumina_catalog_test.dart": "48c4ae4b3d48ca11416199f41dfda3a89cc15b3c3b6c2260fb49b0fb0729c148",
-    "packages/lumina_ui/test/lumina_completion_test.dart": "4a71acfdf9cf319be51eda02561a0b3db82d51c1b1eeb3f8954793028151b0d0",
-    "packages/lumina_ui/test/lumina_components_test.dart": "12581c47e5e03966ae92003a031b6efa7c478ba076c4d2eee6b353a5a9e13e61",
-    "packages/lumina_ui/test/lumina_keyboard_test.dart": "bfc9ea946ac797f9d1288c0b22c088928c3c89acd40898be7aa14abe0329683d",
-    "packages/lumina_ui/test/lumina_native_accessibility_test.dart": "29a5113df8993ea5e59dd85f9d5ef73b2b0cefc40c32f17a4b6fc76c7e623e25",
-    "packages/lumina_ui/test/lumina_picker_accessibility_test.dart": "2896bf8c52fd92b6dc6ebea17aef835578126812df333f4a7557e58e79ea217a",
-    "packages/lumina_ui/test/lumina_reply_test.dart": "e15c5c1cf2e00e954f6e18df76688d2e8500515de5abbf46ad6bdb65f8bf1b3f",
-    "packages/lumina_ui/test/package_api_test.dart": "a513f1ce6a292e4978fadde5f3d37691a56f4457378ba598c99c2f4d562d37e3"
+  "published_assets_sha256": {
+    "06-components/assets/press-middle.png": "5d655a80ceb98b982cd7c26bb673f9c115b3ec2d9bede91d7e57979c6507c71f",
+    "06-components/assets/press-rest.png": "674e5d16baf7df161870d917dc04fe0e242ba2f3e2ad8bbb8fa0ac4da99f5924",
+    "06-components/assets/press-transition.gif": "bd3e47a4cdd0e8be11655247d38507700f37c1caef5a163b717b1841f0654393",
+    "06-components/assets/press-held.png": "ea0bcc27a4b6fa069ab64b206307fb6bfcff8c3be883c48edda7c62f1eef2c0f"
   }
 }

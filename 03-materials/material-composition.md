@@ -46,3 +46,7 @@ Special Effect     <5%
 3. 是否能用 Spacing、Typography 或 Scored 完成分组？
 4. 是否共享同一个光源和几何关系？
 5. 是否有 Reduce Transparency、性能和可读性降级？
+
+## 当前弹层例外
+
+Flutter Dialog、日期/时间选择器、Sheet 和菜单容器使用不透明凸起承托，即使页面选择清透外观。Sheet 的 `LuminaCardScope` 还使内部交互行和按钮使用卡片材质，关闭选择井/镜片玻璃绘制与折射。弹层继续继承触发处主题、文字缩放和无障碍偏好；继承主题不等于所有子表面都透明。
